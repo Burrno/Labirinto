@@ -25,4 +25,4 @@ Método 'destruir' e 'não pixelado':
   ![Método 'destruir' e 'pixelado'](https://github.com/Burrno/Labirinto/blob/main/Labirintos/Exemplos/Dest_noPixel.gif)
 
 
-O projeto tem algumas funções em Cython, apenas para tornar a criação do labirinto mais rápida. Em geral, são funções que acessam a matriz numa posição específica e pega a lista de vizinhos/a quantidade de vizinhos que são 1, ou 0. 
+O projeto tem algumas funções em Cython, apenas para tornar a criação do labirinto mais rápida. Em geral, são funções que acessam a matriz numa posição específica e pega a lista de vizinhos/a quantidade de vizinhos que são 1, ou 0. No meu computador, desconsiderando imports, um labirinto 100x100 é criado em 0.5s, e um 1000x1000, em menos de 1 minuto.
