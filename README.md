@@ -1,7 +1,7 @@
 # Labirinto
 ## Gerador de labirintos em python
 
-Um gerador de labirintos aleatórios. A classe se chama RLabirinto, e o labirinto em si é uma matriz 2D (numpy array) que pode ser acessada por 'RLabirinto.labirinto'. 
+Um gerador de labirintos aleatórios. A classe se chama RLabirinto, e o labirinto em si é uma matriz 2D binária (numpy array, dtype = np.int8) que pode ser acessada por 'RLabirinto.labirinto'. 
 É suficiente apenas passar o tamanho m x n da matriz para o método __init__, mas ele tem algumas outras possibilidade, todas opcionais:
 - 'método', string: pode ser 'expandir' ou 'destruir'. São apenas dois algoritmos diferentes, dão labirintos de formatos diferentes. Por padrão, é 'expandir'.
 - 'pixelado', bool: a classe tem por exemplo o método .mostrar(tamanho=100), que cria uma imagem do labirinto. Pixelado diz apenas sobre a forma como a imagem é renderizada, podendo ser com o Matplotlib ou com Pillow.  Por padrão, é False.
@@ -23,3 +23,6 @@ Método 'destruir' e 'pixelado':
 
 Método 'destruir' e 'não pixelado':
   ![Método 'destruir' e 'pixelado'](https://github.com/Burrno/Labirinto/blob/main/Labirintos/Exemplos/Dest_noPixel.gif)
+
+
+O projeto tem algumas funções em Cython, apenas para tornar a criação do labirinto mais rápida. Em geral, são funções que acessam a matriz numa posição específica e pega a lista de vizinhos/a quantidade de vizinhos que são 1, ou 0. 
